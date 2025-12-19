@@ -61,6 +61,7 @@
     --container-xs: 20rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
+    --container-5xl: 64rem;
     --container-7xl: 80rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
@@ -586,6 +587,10 @@
 
   .max-w-3xl {
     max-width: var(--container-3xl);
+  }
+
+  .max-w-5xl {
+    max-width: var(--container-5xl);
   }
 
   .max-w-7xl {
@@ -1363,6 +1368,12 @@
   @media (width >= 64rem) {
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 

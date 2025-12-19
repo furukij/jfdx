@@ -5,7 +5,8 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    phone: '',
+    address: '',
     message: '',
   });
 
@@ -13,7 +14,7 @@ export function Contact() {
     e.preventDefault();
     // フォーム送信のロジックをここに追加
     alert('お問い合わせありがとうございます。担当者より折り返しご連絡いたします。');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', address: '', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,7 +30,7 @@ export function Contact() {
         <div className="text-center mb-16">
           <h2 id="contact-heading" className="mb-4">お問い合わせ</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            ご質問やご相談がございましたら、お気軽にお問い合わせください。
+            デジタル機器の設定や使い方でお困りのことがありましたら、お気軽にご相談ください。訪問サポートのご予約も承っております。
           </p>
         </div>
 
@@ -69,14 +70,28 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="company" className="block mb-2 text-gray-700">
-                  会社名
+                <label htmlFor="phone" className="block mb-2 text-gray-700">
+                  電話番号
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="address" className="block mb-2 text-gray-700">
+                  住所
                 </label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="address"
+                  name="address"
+                  value={formData.address}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -152,10 +167,20 @@ export function Contact() {
             </div>
 
             <div className="bg-blue-50 p-6 rounded-xl">
-              <p className="text-gray-700">
-                営業時間: 平日 9:00〜18:00<br />
-                (土日祝日を除く)
-              </p>
+              <div className="mb-4">
+                <h4 className="mb-2">営業時間</h4>
+                <p className="text-gray-700">
+                  平日 9:00〜18:00<br />
+                  土日祝日も対応可（要予約）
+                </p>
+              </div>
+              <div>
+                <h4 className="mb-2">対応エリア</h4>
+                <p className="text-gray-700">
+                  東京23区を中心に対応<br />
+                  その他のエリアはご相談ください
+                </p>
+              </div>
             </div>
           </div>
         </div>

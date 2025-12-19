@@ -9,15 +9,15 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'J.F.デジタルトランスフォーメーション株式会社 | ビジネスの未来を共に創造',
-  description = 'J.F.デジタルトランスフォーメーション株式会社は、革新的なソリューションでお客様のビジネスを次のステージへ導きます。24年の業界経験と専門的なコンサルティング、システム開発、マーケティング支援で、企業のデジタル変革をサポートします。',
-  keywords = 'デジタルトランスフォーメーション, DX, コンサルティング, システム開発, マーケティング, ビジネスソリューション, 東京, 新宿, IT支援',
+  title = 'J.F.デジタルトランスフォーメーション株式会社 | デジタル機器の訪問サポート',
+  description = 'スマートフォン、パソコン、プリンタ、WiFiなどの設定や使い方を、ご自宅や職場に訪問して丁寧にサポート。24年の豊富な経験で、お客様の「困った」を解決します。東京都新宿区を拠点に、親切・丁寧なITサポートサービスを提供しています。',
+  keywords = 'スマートフォン設定, パソコン設定, プリンタ設定, WiFi設定, 訪問サポート, ITサポート, デジタル機器, 使い方, 東京, 新宿, シニア向け, 初心者',
   ogImage = 'https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?w=1200&h=630&fit=crop',
   ogType = 'website',
 }: SEOProps) {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'LocalBusiness',
     name: 'J.F.デジタルトランスフォーメーション株式会社',
     url: typeof window !== 'undefined' ? window.location.origin : '',
     logo: ogImage,
@@ -38,12 +38,51 @@ export function SEO({
       areaServed: 'JP',
       availableLanguage: ['Japanese'],
     },
+    priceRange: '$$',
     sameAs: [
       'https://www.facebook.com/yourcompany',
       'https://twitter.com/yourcompany',
       'https://www.linkedin.com/company/yourcompany',
       'https://www.instagram.com/yourcompany',
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'ITサポートサービス',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'スマートフォン設定サポート',
+            description: '初期設定からアカウント作成、各種設定まで訪問サポート',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'パソコン設定サポート',
+            description: 'Windows、Mac の初期設定と使い方サポート',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'プリンタ設定サポート',
+            description: 'プリンタの接続設定と使い方サポート',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'WiFi設定サポート',
+            description: 'ルーター設置とWiFi接続設定サポート',
+          },
+        },
+      ],
+    },
   };
 
   return (

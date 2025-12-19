@@ -1,25 +1,30 @@
-import { Lightbulb, Target, Users, Zap } from 'lucide-react';
+import { Smartphone, Laptop, Printer, Wifi, BookOpen } from 'lucide-react';
 
 const services = [
   {
-    icon: Lightbulb,
-    title: 'イノベーション',
-    description: '最新技術とクリエイティブな発想で、革新的なソリューションを提供します。',
+    icon: Smartphone,
+    title: 'スマートフォンの設定',
+    description: '初期設定からアカウント作成、各種設定まで、お客様のスマートフォンを使いやすく設定いたします。',
   },
   {
-    icon: Target,
-    title: '戦略的コンサルティング',
-    description: 'ビジネス目標の達成に向けて、データドリブンな戦略を立案します。',
+    icon: BookOpen,
+    title: 'スマートフォンアプリの使い方',
+    description: 'LINE、メール、カメラなど、日常で使うアプリの操作方法を丁寧にお教えします。',
   },
   {
-    icon: Users,
-    title: 'チームサポート',
-    description: '専門チームが、プロジェクトの開始から完了まで一貫してサポートします。',
+    icon: Laptop,
+    title: 'パソコンの設定',
+    description: 'Windows、Macの初期設定、ソフトウェアのインストール、使い方まで幅広くサポートします。',
   },
   {
-    icon: Zap,
-    title: 'スピーディな対応',
-    description: '迅速な意思決定と実行力で、ビジネスチャンスを逃しません。',
+    icon: Printer,
+    title: 'プリンタの設定',
+    description: 'プリンタの接続設定、印刷設定、スキャン機能など、プリンタの使い方を丁寧にサポートします。',
+  },
+  {
+    icon: Wifi,
+    title: 'WiFiの設定',
+    description: 'ルーターの設置、WiFi接続設定、セキュリティ設定まで、インターネット環境を整えます。',
   },
 ];
 
@@ -30,11 +35,11 @@ export function Services() {
         <div className="text-center mb-16">
           <h2 id="services-heading" className="mb-4">私たちのサービス</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            お客様のニーズに合わせた包括的なソリューションを提供し、ビジネスの成長を加速させます。
+            ご自宅や職場に訪問し、デジタル機器の設定や使い方を丁寧にサポートいたします。
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

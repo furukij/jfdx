@@ -20,12 +20,12 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="max-w-3xl">
           <h1 className="mb-6">
-            ビジネスの未来を<br />
-            共に創造する
+            デジタル機器の設定・操作を<br />
+            訪問サポート
           </h1>
           <p className="mb-8 text-blue-100 text-lg md:text-xl max-w-2xl">
-            革新的なソリューションで、お客様のビジネスを次のステージへ。
-            私たちは最新のテクノロジーと豊富な経験で、あなたの成功をサポートします。
+            スマートフォン、パソコン、プリンタ、WiFiなどの設定でお困りですか？<br />
+            ご自宅や職場に訪問し、丁寧にサポートいたします。24年の豊富な経験でお客様の「困った」を解決します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
