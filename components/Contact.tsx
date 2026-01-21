@@ -177,7 +177,7 @@ export function Contact() {
               <div>
                 <h4 className="mb-2">対応エリア</h4>
                 <p className="text-gray-700">
-                  東京23区を中心に対応<br />
+                  東京、神奈川、千葉、埼玉<br />
                   その他のエリアはご相談ください
                 </p>
               </div>

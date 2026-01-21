@@ -1,7 +1,7 @@
 {
   "name": "jf-digital-transformation",
   "version": "1.0.0",
-  "description": "J.F.デジタルトランスフォーメーション株式会社 - コーポレートランディングページ",
+  "description": "J.F.デジタルトランスフォーメーション株式会社",
   "type": "module",
   "scripts": {
     "dev": "vite",
